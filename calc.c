@@ -5,7 +5,7 @@
 
 int main(int argc, char *argv[]) {
 
-    if(argc != 4) {
+    if(argc < 4) {
         fprintf(stderr, "Número de argumentos inválido.\n");
         return 1;
     }
@@ -19,6 +19,10 @@ int main(int argc, char *argv[]) {
 
     if(*argv[2] == '-') {
         printf("%i\n", subtracao(a, b));
+    }
+
+    if(*argv[2] == '*') {
+        printf("%i\n", multiplicacao(a, b));
     }
 
     return 0;
