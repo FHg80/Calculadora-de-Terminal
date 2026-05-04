@@ -9,5 +9,9 @@ int main(int argc, char *argv[]) {
         printf("%i\n", soma(atoi(argv[1]), atoi(argv[3])));
     }
 
+    if(*argv[2] == '-') {
+        printf("%i\n", subtracao(atoi(argv[1]), atoi(argv[3])));
+    }
+
     return 0;
 }
