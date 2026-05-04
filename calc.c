@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
 
     if(operation == '/') {
         
-        if(divisao(a, b) == 0) {
+        if(b == 0) {
             fprintf(stderr, "Não é possível dividir por 0.\n");
             return 1;
         } 
