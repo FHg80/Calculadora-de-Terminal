@@ -14,34 +14,34 @@ int main(int argc, char *argv[]) {
     double b = atof(argv[3]);
     char operation = *argv[2];
 
-    if(operation == '+') {
-        printf("%.2f\n", soma(a, b));
-    }
+    switch(operation) {
+        case '+':
+            printf("%.2f\n", soma(a, b));
+            break;
+        case '-':
+            printf("%.2f\n", subtracao(a, b));
+            break;
+        case '*':
+            printf("%.2f\n", multiplicacao(a, b));
+            break;
+        case '/':
+            if(b == 0) {
+                fprintf(stderr, "Não é possível dividir por 0.\n");
+                return 1;
+            }
 
-    if(operation == '-') {
-        printf("%.2f\n", subtracao(a, b));
-    }
+            printf("%.2f\n", divisao(a, b));
+            break;
 
-    if(operation == '*') {
-        printf("%.2f\n", multiplicacao(a, b));
-    }
-
-    if(operation == '/') {
-        
-        if(b == 0) {
-            fprintf(stderr, "Não é possível dividir por 0.\n");
-            return 1;
-        } 
-        
-        printf("%.2f\n", divisao(a, b));
-    }
-
-    if(operation == '^') {
-        printf("%.2f\n", potencia(a, b));
-    }
-
-    if(operation == 'r') {
-        printf("%.2f\n", raiz(a, b));
+        case '^':
+            printf("%.2f\n", potencia(a, b));
+            break;
+        case 'r':
+            printf("%.2f\n", raiz(a, b));
+            break;
+        default:
+            fprintf(stderr, "Número de argumentos inválido.\n");
+            return 1;            
     }
 
     return 0;
