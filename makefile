@@ -3,4 +3,4 @@ calc.o: calc.c
 arit.o: arit.c
 	gcc -c arit.c -o arit.o
 calc: calc.o arit.o
-	gcc calc.o arit.o -o calc
+	gcc calc.o arit.o -lm -o calc

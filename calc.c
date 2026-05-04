@@ -36,6 +36,10 @@ int main(int argc, char *argv[]) {
         printf("%.2f\n", divisao(a, b));
     }
 
+    if(operation == '^') {
+        printf("%.2f\n", potencia(a, b));
+    }
+
 
     return 0;
 }
