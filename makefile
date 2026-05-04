@@ -1,4 +1,6 @@
-main.o: main.c
+main.o: main.c 
 	gcc -c main.c -o main.o
-main: main.o
-	gcc main.o -o main
+arit.o: arit.c
+	gcc -c arit.c -o arit.o
+main: main.o arit.o
+	gcc main.o arit.o -o main
