@@ -10,20 +10,20 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    int a = atoi(argv[1]);
-    int b = atoi(argv[3]);
+    double a = atof(argv[1]);
+    double b = atof(argv[3]);
     char operation = *argv[2];
 
     if(operation == '+') {
-        printf("%i\n", soma(a, b));
+        printf("%.2f\n", soma(a, b));
     }
 
     if(operation == '-') {
-        printf("%i\n", subtracao(a, b));
+        printf("%.2f\n", subtracao(a, b));
     }
 
     if(operation == '*') {
-        printf("%i\n", multiplicacao(a, b));
+        printf("%.2f\n", multiplicacao(a, b));
     }
 
     if(operation == '/') {
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
             return 1;
         } 
         
-        printf("%i\n", divisao(a, b));
+        printf("%.2f\n", divisao(a, b));
     }
 
 

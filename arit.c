@@ -1,18 +1,18 @@
 #include "arit.h"
 
-int soma(int a, int b) {
+double soma(double a, double b) {
     return a + b;
 }
 
-int subtracao(int a, int b) {
+double subtracao(double a, double b) {
     return a - b;
 }
 
-int multiplicacao(int a, int b) {
+double multiplicacao(double a, double b) {
     return a * b;
 }
 
-int divisao(int a, int b) {
+double divisao(double a, double b) {
     if(a == 0 || b == 0) {
         return 0;
     } else {
