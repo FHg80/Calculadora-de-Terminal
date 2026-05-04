@@ -12,18 +12,30 @@ int main(int argc, char *argv[]) {
 
     int a = atoi(argv[1]);
     int b = atoi(argv[3]);
+    char operation = *argv[2];
 
-    if(*argv[2] == '+') {
+    if(operation == '+') {
         printf("%i\n", soma(a, b));
     }
 
-    if(*argv[2] == '-') {
+    if(operation == '-') {
         printf("%i\n", subtracao(a, b));
     }
 
-    if(*argv[2] == '*') {
+    if(operation == '*') {
         printf("%i\n", multiplicacao(a, b));
     }
+
+    if(operation == '/') {
+        
+        if(divisao(a, b) == 0) {
+            fprintf(stderr, "Não é possível dividir por 0.\n");
+            return 1;
+        } 
+        
+        printf("%i\n", divisao(a, b));
+    }
+
 
     return 0;
 }
