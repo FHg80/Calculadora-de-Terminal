@@ -23,7 +23,10 @@ double divisao(double a, double b) {
 }
 
 double potencia(double a, double b) {
+   return pow(a, b);
+}
 
-   double result = pow(a, b);
-   return result;
+double raiz(double a, double b) {
+    double raiz = 1/b;
+    return pow(a, raiz);
 }

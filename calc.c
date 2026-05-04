@@ -40,6 +40,9 @@ int main(int argc, char *argv[]) {
         printf("%.2f\n", potencia(a, b));
     }
 
+    if(operation == 'r') {
+        printf("%.2f\n", raiz(a, b));
+    }
 
     return 0;
 }
